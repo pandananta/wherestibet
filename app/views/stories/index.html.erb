@@ -1,5 +1,13 @@
-<div id="world-map" style="width: 70%px; height:500px"></div>
+<% coordinates=[] %>
+<% @stories.each do |story| %>
+    <% entry = story.latitude %>
+    <% coordinates.push entry %>
+    <!-- <p> <%= entry %> </p> -->
+<% end %>
 
+
+<div id="world-map" style="width: 70%px; height:500px"></div>
+<h2>WHERE'S TIBET? A virtual census of the Tibetan spirit </h2>
 
 <table>
   <tr>
