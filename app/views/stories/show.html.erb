@@ -1,45 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Author:</b>
+  Hi, my name is 
   <%= @story.author %>
+  .
 </p>
-
 <p>
-  <b>Gender:</b>
-  <%= @story.gender %>
-</p>
-
-<p>
-  <b>Age:</b>
-  <%= @story.age %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @story.email %>
-</p>
-
-<p>
-  <b>Agreeterms:</b>
-  <%= @story.agreeTerms %>
-</p>
-
-<p>
-  <b>Narrative:</b>
+  And this is my story:
   <%= @story.narrative %>
 </p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @story.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @story.longitude %>
-</p>
-
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>

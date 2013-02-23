@@ -17,7 +17,7 @@
 
 <% @stories.each do |story| %>
   <tr>
-    <td><%= story.author %></td>
+    <td><%= link_to story.author, story %></td>
     <td><%= story.gender %></td>
     <td><%= story.age %></td>
     <td><%= story.email %></td>
@@ -34,4 +34,4 @@
 
 <br />
 
-<%= link_to 'New Story', new_story_path %>
+<%= link_to 'Add your own story!', new_story_path %>
