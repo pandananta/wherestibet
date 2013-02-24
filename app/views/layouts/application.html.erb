@@ -17,11 +17,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="brand" href="#">Where's Tibet?</a>
+        <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li><a href="#">About</a></li>
-            <li><a href="#about">Add your story</a></li>
+            <li><%= link_to 'About', root_path %></li>
+            <li><%= link_to 'Add your own story!', new_story_path %></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

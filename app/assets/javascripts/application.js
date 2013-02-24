@@ -78,16 +78,16 @@ $(function(){
       }
   });
 
-  map.container.click(function(e){
-      var latLng = map.pointToLatLng(e.offsetX, e.offsetY),
-          targetCls = $(e.target).attr('class');
+  // map.container.click(function(e){
+  //     var latLng = map.pointToLatLng(e.offsetX, e.offsetY),
+  //         targetCls = $(e.target).attr('class');
 
-      if (latLng && (!targetCls || (targetCls && $(e.target).attr('class').indexOf('jvectormap-marker') === -1))) {
-        markersCoords[markerIndex] = latLng;
-        map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
-        markerIndex += 1;
-      }
-  });
+  //     if (latLng && (!targetCls || (targetCls && $(e.target).attr('class').indexOf('jvectormap-marker') === -1))) {
+  //       markersCoords[markerIndex] = latLng;
+  //       map.addMarker(markerIndex, {latLng: [latLng.lat, latLng.lng]});
+  //       markerIndex += 1;
+  //     }
+  // });
 
 
 
