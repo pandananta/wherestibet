@@ -65,7 +65,9 @@ $(function(){
       map: 'world_mill_en',
       markerStyle: {
         initial: {
-          fill: 'red'
+          fill: 'red',
+          stroke: 'red',
+          r: 2
         }
       },
       container: $('#world-map'),
