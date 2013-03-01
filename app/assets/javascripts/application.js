@@ -22,9 +22,8 @@
 //    var markerList=[];
 //  });
 
-// $(function setMarkers(mlist){
-// 	// alert("reached");
-// 	markerList=mlist;
+// $(function setMarkers(){
+// 	$('#world-map').vectorMap('set', 'markers', {latLng: [7.35, 134.46], name: 'Tenzin'});
 // });
 
 // $(function(){
