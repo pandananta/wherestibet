@@ -5,31 +5,33 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="">
    <meta name="author" content="">
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRWXICpdwd59zv3ecuKSeAmJiNi5JBzWY&sensor=true">
+</script>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <div class="container">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><%= link_to 'About', root_path %></li>
-            <li><%= link_to 'Add yourself!', new_story_path %></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+      
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><%= link_to 'About', root_path %></li>
+          <li><%= link_to 'Add yourself!', new_story_path %></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
   </div>
-  <div class="container">
-    <%= yield %>
-  </div>
+</div>
+  <%= yield %>
 </body>
 <%= javascript_include_tag "application" %>
 </html>
