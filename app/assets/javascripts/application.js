@@ -16,34 +16,34 @@
 //= require_tree .
 
 function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(0,0),
-          zoom: 4,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-        
-        var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h2 id="firstHeading" class="firstHeading">Tibet is right here!</h2>'+
-            '<iframe src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/562674_10151020009322986_336046691_n.jpg"></iframe>'+
-            '</div>';
+  var mapOptions = {
+    center: new google.maps.LatLng(0,0),
+    zoom: 4,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
 
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-        });
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<iframe src="/stories/1"></iframe>'+
+      '</div>';
 
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(0,0),
-            map: map,
-            title:"Hello World!"
-        });
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+  });
 
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
-          // window.location.href = 'http://www.google.com';
-        });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+  var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(0,0),
+      map: map,
+      title:"Hello World!"
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    // infowindow.open(map,marker);
+    window.location.href = '/stories/1';
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
