@@ -41,8 +41,8 @@ function initialize() {
   });
 
   google.maps.event.addListener(marker, 'click', function() {
-    // infowindow.open(map,marker);
-    window.location.href = '/stories/1';
+    infowindow.open(map,marker);
+    // window.location.href = '/stories/1';
   });
 }
 google.maps.event.addDomListener(window, 'load', initialize);
