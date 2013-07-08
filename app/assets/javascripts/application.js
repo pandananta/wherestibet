@@ -12,6 +12,7 @@
 //
 //= require jquery_ujs
 //= require bootstrap.js
+//= require jquery.fancybox
 //= require_tree .
 
 function initialize() {
@@ -50,7 +51,8 @@ function initialize() {
   function initMarker(marker, number) {
     google.maps.event.addListener(marker, 'click', function(e) {
       // infowindow.open(map,markers[i]);
-      window.location.href = ("/stories/" + window.stories[number]["id"]);
+      // window.location.href = ("/stories/" + window.stories[number]["id"]);
+      $.fancybox( {href: ('/stories/'+window.stories[number]["id"]), type:'iframe'});
     });
   }
 }
