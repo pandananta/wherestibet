@@ -1,17 +1,40 @@
-<div class = "container">
-	<p id="notice"><%= notice %></p>
+<style type="text/css">
+H1, H2, H3, H4 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	color: #666;
+	font-size: 35px;
+}
+H2 {
+	color: #888;
+	font-size: 25px;
+}
+P{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 18px;
+	color: #555555;
+	line-height: 1.5em;
+}
+A {
+	color: #006600;
+}
+.content{
+	padding:30px;
+}
+</style>
 
-	<p>
-	  Hi, my name is 
+
+<div class = "content">
+	<h1>
+	  My name is 
 	  <%= @story.author %>
 	  .
-	</p>
-	<p>
+	</h1>
+	<h2>
 	  I am a 
 	  <%= @story.age%>
 	  year old woman from America.
-	  And this is my story: 
-	</p>
+	</h2>
 	<p>
 	  <%= @story.narrative %>
 	</p>

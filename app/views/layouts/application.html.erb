@@ -12,18 +12,20 @@
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li><%= link_to 'About', root_path %></li>
-            <li><%= link_to 'Add yourself!', new_story_path %></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><%= link_to 'About', root_path %></li>
+              <li><%= link_to 'Add yourself!', new_story_path %></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
     <%= yield %>
