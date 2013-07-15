@@ -38,8 +38,8 @@
   </div>
   <% result=request.location %>
   <div class= "geo">
-    <p>According to our calculations your location is here!
-      <%= result.city %> </p>
+    <p>According to our calculations your location is
+      <%= "#{result.city}, #{result.country}" %> </p>
   </div>
   <div class="actions">
     <%= f.submit %>
