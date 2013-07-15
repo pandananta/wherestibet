@@ -12,36 +12,31 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :author %><br />
+    <%= f.label "Full name" %><br />
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.number_field :gender %>
+    <%= f.label "Gender" %><br />
+    <%= f.select :gender, options_for_select(["Woman", "Man"]), {}, {:multiple => false} %>
   </div>
   <div class="field">
-    <%= f.label :age %><br />
+    <%= f.label "age" %><br />
     <%= f.number_field :age %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label "email address" %><br />
+    <%= f.email_field :email %>
   </div>
   <div class="field">
-    <%= f.label :agreeTerms %><br />
+    <%= f.label "Read our privacy policy?" %><br />
     <%= f.check_box :agreeTerms %>
   </div>
   <div class="field">
-    <%= f.label :narrative %><br />
+    <%= f.label "Share your story here" %><br />
     <%= f.text_area :narrative %>
   </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
+  <div class= "geo">
+    <p>According to our calculations your location is here!</p>
   </div>
   <div class="actions">
     <%= f.submit %>
