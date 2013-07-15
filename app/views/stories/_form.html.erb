@@ -14,6 +14,7 @@
   <div class="field">
     <%= f.label "Full name" %><br />
     <%= f.text_field :author %>
+
   </div>
   <div class="field">
     <%= f.label "Gender" %><br />
@@ -35,8 +36,10 @@
     <%= f.label "Share your story here" %><br />
     <%= f.text_area :narrative %>
   </div>
+  <% result=request.location %>
   <div class= "geo">
-    <p>According to our calculations your location is here!</p>
+    <p>According to our calculations your location is here!
+      <%= result.city %> </p>
   </div>
   <div class="actions">
     <%= f.submit %>
