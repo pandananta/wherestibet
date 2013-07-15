@@ -1,5 +1,9 @@
 Wherestibet::Application.routes.draw do
-  resources :stories
+  devise_for :users
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :stories, :only => [:index, :create, :new, :show] 
 
 
   # The priority is based upon order of creation:
