@@ -32,19 +32,20 @@
     <%= f.label "Read our privacy policy?" %><br />
     <%= f.check_box :agreeTerms %>
   </div>
-  <div class="field">
-    <%= f.label "Share your story here" %><br />
-    <%= f.text_area :narrative %>
-  </div>
-  
-  <div class= "geo">
+    <div class= "geo">
     <% g=request.location %>
     <%= f.hidden_field :city, :value => g.city %>
     <%= f.hidden_field :country, :value => g.country %>
     <%= f.hidden_field :ip, :value => request.ip %>
     <p>According to your ip address your location is:
-      <strong><%= "#{g.city}, #{g.country}" %></strong>. </p>
+      <strong><%= "#{g.city}, #{g.country}" %></strong> (approximated for privacy). </p>
   </div>
+  <div class="field">
+    <%= f.label "Please write a paragraph describing an interesting life event or describing your lifestyle as a Tibetan in #{g.city}, #{g.country}; Some ideas include: if you could talk to Tibetans in another country about your life, what would you tell them? If you could talk to non-Tibetans about your life, what would you tell them?"  %><br />
+    <%= f.text_area :narrative %>
+  </div>
+  
+
 
   <div class="actions">
     <%= f.submit %>
