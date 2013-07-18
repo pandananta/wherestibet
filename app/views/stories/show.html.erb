@@ -36,6 +36,6 @@ A {
 	  year old <%= @story.gender%> from <%= @story.city%>, <%= @story.country%>.
 	</h2>
 	<p>
-	  <%= @story.narrative %>
+	  <%= simple_format(@story.narrative) %>
 	</p>
 </div>
