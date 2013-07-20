@@ -58,3 +58,11 @@ body p{
 	color: #555555;
 	line-height: 1.5em;
 }
+body a, body a:visited{
+	color: #A5BFDD;
+}
+body a:hover{
+	background-color: transparent;
+	color:#FF7C70;
+	text-decoration: none;
+}

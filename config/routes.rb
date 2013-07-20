@@ -7,4 +7,5 @@ Wherestibet::Application.routes.draw do
 
   root :to => 'stories#index'
   match "/about" => "pages#about"
+  match "/privacy" => "pages#privacy"
 end
