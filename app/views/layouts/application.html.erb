@@ -10,7 +10,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -21,8 +21,8 @@
           <%= link_to 'Where\'s Tibet?', root_path, :class=>"brand" %>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><%= link_to 'About', "/about" %></li>
-              <li><%= link_to 'Add yourself!', new_story_path %></li>
+              <li class="<%= 'active' if current_page?("/about") %>"><%= link_to 'About', "/about"%></li>
+              <li class="<%= 'active' if current_page?(new_story_path) %>"><%= link_to 'Add yourself!', new_story_path %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
