@@ -25,6 +25,19 @@ function initialize() {
   };
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
+  
+
+  var homeButton = document.getElementById("wtb");
+  homeButton.onclick=function(){
+    //reset zoom
+    var mapZoom=3; 
+    var mapCentre=new google.maps.LatLng(30,0); 
+    var mapLat=mapCentre.lat(); 
+    var mapLng=mapCentre.lng(); 
+    var cookiestring=mapLat+"_"+mapLng+"_"+mapZoom; 
+    setCookie("myMapCookie",cookiestring, 30); 
+  };
+
   loadMapState();
 
   for (var i=0; i<window.stories.length; i++){ 
