@@ -9,6 +9,7 @@ class Story < ActiveRecord::Base
       id: self.id,
       latitude: self.latitude,
       longitude: self.longitude,
+      author: self.author
     }
   end
 end

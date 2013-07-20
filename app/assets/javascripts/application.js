@@ -26,32 +26,22 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
 
-  var contentString = '<div id="content">'+
-      '<div id="siteNotice">'+
-      '</div>'+
-      '<iframe src="/stories/1"></iframe>'+
-      '</div>';
-
-  var infowindow = new google.maps.InfoWindow({
-      content: contentString,
-  });
-
   for (var i=0; i<window.stories.length; i++){ 
     markerLat = window.stories[i]["latitude"];
     markerLong = window.stories[i]["longitude"];
     markerID = window.stories[i]["id"]
+    markerAuthor = window.stories[i]["author"]
 
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(markerLat,markerLong),
       map: map,
-      title:"Hello World!"
+      title:markerAuthor
     });
     initMarker(marker, i);
   }
 
   function initMarker(marker, number) {
     google.maps.event.addListener(marker, 'click', function(e) {
-      // infowindow.open(map,markers[i]);
       window.location.href = ("/?n=" + window.stories[number]["id"]);
       // $.fancybox( {href: ('/stories/'+window.stories[number]["id"]), type:'iframe'});
     });
