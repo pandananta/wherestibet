@@ -27,13 +27,11 @@ function initialize() {
     
     mapOptions = {
       center: new google.maps.LatLng(40,15),
-      zoom: -1,
-      minZoom: -5,
+      zoom: 0,
+      minZoom: 0,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };  
-    // alert("hi");  
   }
-  alert(mapOptions["zoom"]); 
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
   
