@@ -62,7 +62,9 @@ function initialize() {
   }
 
   if ($.url(window.location.href).param('n')) {
-    $.fancybox( {href: ('/stories/' + $.url(window.location.href).param('n')) , type:'iframe'})
+    $.fancybox( {href: ('/stories/' + $.url(window.location.href).param('n')) , type:'iframe',  afterClose : function() {
+        window.location.href = ("/"); return;}
+    });
   }
   google.maps.event.addListener(map, 'tilesloaded', tilesLoaded);
   function tilesLoaded() {
