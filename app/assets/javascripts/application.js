@@ -56,14 +56,18 @@ function initialize() {
 
   function initMarker(marker, number) {
     google.maps.event.addListener(marker, 'click', function(e) {
-      window.location.href = ("/?n=" + window.stories[number]["id"]);
-      // $.fancybox( {href: ('/stories/'+window.stories[number]["id"]), type:'iframe'});
+      // window.location.href = ("/?n=" + window.stories[number]["id"]);
+      //loads fancybox without page reload, but changes url to match story url
+      history.replaceState("", "Where's Tibet?", "/?n=" + window.stories[number]["id"]);
+      $.fancybox( {href: ('/stories/' + $.url(window.location.href).param('n')) , type:'iframe',  afterClose : function() {
+        history.replaceState("", "Where's Tibet?", "/"); return;}
+      });
     });
   }
 
   if ($.url(window.location.href).param('n')) {
     $.fancybox( {href: ('/stories/' + $.url(window.location.href).param('n')) , type:'iframe',  afterClose : function() {
-        window.location.href = ("/"); return;}
+        history.replaceState("", "Where's Tibet?", "/"); return;}
     });
   }
   google.maps.event.addListener(map, 'tilesloaded', tilesLoaded);
