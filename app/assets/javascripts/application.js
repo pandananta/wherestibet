@@ -23,6 +23,14 @@ function initialize() {
     minZoom: 2,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
+  if( $('#map-canvas').css('margin-top') == '0px' ) {
+    alert("hi");
+    mapOptions = {
+      center: new google.maps.LatLng(40,15),
+      zoom: 1,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };    
+  }
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
   

@@ -104,5 +104,9 @@ div#privacy h2, div#tos h2{
 		position:relative; 
 		margin-top:0px; 
 		padding:0px;
+
+	}
+	p{
+		font-size:8px;
 	}
 }
