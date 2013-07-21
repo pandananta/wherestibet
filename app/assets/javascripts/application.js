@@ -44,6 +44,13 @@ function initialize() {
     var mapLat=mapCentre.lat(); 
     var mapLng=mapCentre.lng(); 
     var cookiestring=mapLat+"_"+mapLng+"_"+mapZoom; 
+    if( $('#map-canvas').css('margin-top') == '0px' ) {
+      mapZoom=0; 
+      mapCentre=new google.maps.LatLng(40,15); 
+      mapLat=mapCentre.lat(); 
+      mapLng=mapCentre.lng(); 
+      cookiestring=mapLat+"_"+mapLng+"_"+mapZoom; 
+    }
     setCookie("myMapCookie",cookiestring, 30); 
   };
 
