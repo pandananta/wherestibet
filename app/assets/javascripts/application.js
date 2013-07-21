@@ -27,7 +27,7 @@ function initialize() {
     
     mapOptions = {
       center: new google.maps.LatLng(40,15),
-      zoom: 0,
+      zoom: 1,
       minZoom: 0,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };  
@@ -45,7 +45,7 @@ function initialize() {
     var mapLng=mapCentre.lng(); 
     var cookiestring=mapLat+"_"+mapLng+"_"+mapZoom; 
     if( $('#map-canvas').css('margin-top') == '0px' ) {
-      mapZoom=0; 
+      mapZoom=1; 
       mapCentre=new google.maps.LatLng(40,15); 
       mapLat=mapCentre.lat(); 
       mapLng=mapCentre.lng(); 
