@@ -8,10 +8,10 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require bootstrap
  *= require bootstrap-responsive
  *= require jquery.fancybox
+ *= require_self
  *= require_tree .
  */
 
@@ -80,4 +80,29 @@ div#privacy h2, div#tos h2{
    	font-weight: 300;
 	color: #A5BFDD;
 	font-size: 25px;
+}
+@media (max-width: 1080px) {
+	html { 
+		height: 100%;
+	}
+	body{
+		height: 100%; 
+		margin:0px;
+		width:100%;
+		padding:0px;
+	}
+	body .navbar-fixed-top {
+		margin-bottom: 0px;
+	}
+	.container{
+		margin-left:30px;
+		margin-right:30px;
+	}
+  	#map-canvas { 
+		height: 100%; 
+		width:100%; 
+		position:relative; 
+		margin-top:0px; 
+		padding:0px;
+	}
 }
