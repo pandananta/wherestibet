@@ -28,6 +28,12 @@ body{
 label{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
+p, ol, ul, td{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 18px;
+	color: #555555;
+	line-height: 1.5em;
+}
 .brand:hover {
   background-color: transparent;
 }
