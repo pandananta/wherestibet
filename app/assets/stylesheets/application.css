@@ -25,6 +25,9 @@ body{
 	background-image:url('background.png');
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
+label{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
 .brand:hover {
   background-color: transparent;
 }
@@ -43,6 +46,16 @@ body{
 	position:relative; 
 	margin-top:40px; 
 	padding:0px;
+}
+#form-outer{
+	margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#form-centered{
+	left:50%;
+	text-align: left;
+	margin-right: auto; margin-left: auto; width: 545px;
 }
 body h1, body h2, body h3, body h4{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
