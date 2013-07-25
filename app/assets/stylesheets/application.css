@@ -25,14 +25,11 @@ body{
 	background-image:url('background.png');
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
-label{
+p, ol, ul, td, label{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-}
-p, ol, ul, td{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size: 18px;
+	font-size: 14px;
 	color: #555555;
-	line-height: 1.5em;
+	
 }
 .brand:hover {
   background-color: transparent;
@@ -61,7 +58,9 @@ p, ol, ul, td{
 #form-centered{
 	left:50%;
 	text-align: left;
-	margin-right: auto; margin-left: auto; width: 545px;
+	margin-right: auto; 
+	margin-left: auto; 
+	width: 545px;
 }
 body h1, body h2, body h3, body h4{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -72,12 +71,6 @@ body h1, body h2, body h3, body h4{
 body h2 {
 	color: #888;
 	font-size: 25px;
-}
-body p{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size: 18px;
-	color: #555555;
-	line-height: 1.5em;
 }
 body a, body a:visited{
 	color: #A5BFDD;
@@ -109,6 +102,10 @@ div#privacy h2, div#tos h2{
 		margin:0px;
 		width:100%;
 		padding:0px;
+	}
+	.page{
+		padding-top:20px;
+		padding-bottom:20px;
 	}
 	body .navbar-fixed-top {
 		margin-bottom: 0px;

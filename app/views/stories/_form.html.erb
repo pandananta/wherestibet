@@ -17,7 +17,7 @@
 
       <div class="field">
         <%= f.label "Full name"%><br />
-        <%= f.text_field :author, :class => "input-xxlarge" %>
+        <%= f.text_field :author, :class => "span5" %>
 
       </div>
       <div class="field">
@@ -26,15 +26,11 @@
       </div>
       <div class="field">
         <%= f.label "age" %><br />
-        <%= f.number_field :age, :class => "input-xxlarge" %>
+        <%= f.number_field :age, :class => "span5" %>
       </div>
       <div class="field">
         <%= f.label "email address (will not be shared)." %><br />
-        <%= f.email_field :email, :class => "input-xxlarge" %>
-      </div>
-      <div class="field">
-        <%= f.label "Read our #{link_to('privacy policy', '/privacy')}" %><br />
-        <%= f.check_box :agreeTerms %>
+        <%= f.email_field :email, :class => "span5" %>
       </div>
         <div class= "geo">
         <% g=request.location %>
@@ -45,7 +41,11 @@
       </div>
       <div class="field">
         <%= f.label "Please write a paragraph describing an interesting life event or describing your lifestyle as a Tibetan in #{g.city}, #{g.country}; Some ideas include: if you could talk to Tibetans in another country about your life, what would you tell them? If you could talk to non-Tibetans about your life, what would you tell them?"  %><br />
-        <%= f.text_area :narrative, :class => "input-xxlarge", :rows => "7" %>
+        <%= f.text_area :narrative, :class => "span5", :rows => "7" %>
+      </div>
+      <div class="field">
+        <p> By submitting, you acknowledge you have read the <%=link_to('terms of service', '/tos')%>.</p>
+         <%= f.hidden_field :agreeTerms, :value => 1 %>
       </div>
       <div class="actions">
         <%= f.submit %>
