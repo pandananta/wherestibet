@@ -56,7 +56,6 @@ p, ol, ul, td, label{
     text-align: center;
 }
 #form-centered{
-	left:50%;
 	text-align: left;
 	margin-right: auto; 
 	margin-left: auto; 
@@ -124,5 +123,11 @@ div#privacy h2, div#tos h2{
 	}
 	p{
 		font-size:8px;
+	}
+	#form-centered{
+		text-align: left;
+		margin-right: auto; 
+		margin-left: auto; 
+		width: 200px;
 	}
 }
