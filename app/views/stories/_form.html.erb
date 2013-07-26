@@ -46,8 +46,10 @@
           <p> By submitting, you acknowledge you have read the <%=link_to('terms of service', '/tos')%>.</p>
            <%= f.hidden_field :agreeTerms, :value => 1 %>
         </div>
+        <br>
+        <br>
         <div class="actions">
-          <%= f.submit %>
+          <%= f.submit "Save story", :class => "btn btn-success btn-large btn-block" %>
         </div>
       </div>
     </div>
