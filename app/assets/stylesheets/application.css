@@ -50,25 +50,17 @@ p, ol, ul, td, label{
 	margin-top:40px; 
 	padding:0px;
 }
-#form-outer{
-	margin: 0;
-    padding: 0;
-    text-align: center;
-}
-#form-centered{
-	text-align: left;
-	margin-right: auto; 
-	margin-left: auto; 
-	width: 545px;
-}
-body h1, body h2, body h3, body h4{
+ h1,  h2,  h3,  h4{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 300;
-	color: #666;
 	font-size: 35px;
 }
-body h2 {
-	color: #888;
+h1{
+	color: #FF7C70;
+}
+
+h2{
+	color: #A5BFDD;
 	font-size: 25px;
 }
 body a, body a:visited{
@@ -79,19 +71,7 @@ body a:hover{
 	color:#FF7C70;
 	text-decoration: none;
 }
-div#privacy h1, div#tos h1{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-	color: #FF7C70;
-	font-size: 35px;
-}
 
-div#privacy h2, div#tos h2{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-	color: #A5BFDD;
-	font-size: 25px;
-}
 @media (max-width: 1080px) {
 	html { 
 		height: 100%;
@@ -123,11 +103,5 @@ div#privacy h2, div#tos h2{
 	}
 	p{
 		font-size:8px;
-	}
-	#form-centered{
-		text-align: left;
-		margin-right: auto; 
-		margin-left: auto; 
-		width: 200px;
 	}
 }

@@ -1,54 +1,54 @@
 
 <%= form_for(@story) do |f| %>
-  <div id ="form-outer">  
-    <div id="form-centered"> 
-      <h1>Share your Life Story</h1>
-      <% if @story.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+  <div class ="container">  
+    <% if @story.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
 
-          <ul>
-          <% @story.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
+        <ul>
+        <% @story.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class = "row-fluid">
+      <div class="span6 offset3">  
+            <h1>Share your Life Story</h1>
+        <div class="field">
+          <%= f.label "Full name"%>
+          <%= f.text_field :author, :class => "input-xxlarge" %>
         </div>
-      <% end %>
-
-      <div class="field">
-        <%= f.label "Full name"%><br />
-        <%= f.text_field :author, :class => "span5" %>
-
-      </div>
-      <div class="field">
-        <%= f.label "Gender" %><br />
-        <%= f.select :gender, options_for_select(["Woman", "Man"]), {}, {:multiple => false} %>
-      </div>
-      <div class="field">
-        <%= f.label "age" %><br />
-        <%= f.number_field :age, :class => "span5" %>
-      </div>
-      <div class="field">
-        <%= f.label "email address (will not be shared)." %><br />
-        <%= f.email_field :email, :class => "span5" %>
-      </div>
-      <div class="field">
-        <%= f.label "As a Tibetan refugee, how would you describe your life to someone living in a different country?"  %><br />
-        <%= f.text_area :narrative, :class => "span5", :rows => "7" %>
-      </div>
-      <div class= "geo">
-        <% g=request.location %>
-        <%= f.hidden_field :city, :value => g.city %>
-        <%= f.hidden_field :country, :value => g.country %>
-        <%= f.hidden_field :ip, :value => request.ip %>
-        <%= f.label "After you click Create, your story will be plotted on the homepage at #{g.city}, #{g.country}." %><br />
-      </div>
-      <div class="field">
-        <p> By submitting, you acknowledge you have read the <%=link_to('terms of service', '/tos')%>.</p>
-         <%= f.hidden_field :agreeTerms, :value => 1 %>
-      </div>
-      <div class="actions">
-        <%= f.submit %>
+        <div class="field">
+          <%= f.label "Gender" %>
+          <%= f.select :gender, options_for_select(["Woman", "Man"]), {}, :multiple => false, :class => "input-xxlarge" %>
+        </div>
+        <div class="field">
+          <%= f.label "age" %>
+          <%= f.number_field :age, :class => "input-xxlarge" %>
+        </div>
+        <div class="field">
+          <%= f.label "email address (will not be shared)." %>
+          <%= f.email_field :email, :class => "input-xxlarge" %>
+        </div>
+        <div class="field">
+          <%= f.label "As a Tibetan refugee, how would you describe your life to someone living in a different country?"  %>
+          <%= f.text_area :narrative, :class => "input-xxlarge", :rows => "7" %>
+        </div>
+        <div class= "geo">
+          <% g=request.location %>
+          <%= f.hidden_field :city, :value => g.city %>
+          <%= f.hidden_field :country, :value => g.country %>
+          <%= f.hidden_field :ip, :value => request.ip %>
+          <%= f.label "After you click Create, your story will be plotted on the homepage at #{g.city}, #{g.country}." %>
+        </div>
+        <div class="field">
+          <p> By submitting, you acknowledge you have read the <%=link_to('terms of service', '/tos')%>.</p>
+           <%= f.hidden_field :agreeTerms, :value => 1 %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       </div>
     </div>
   </div>
