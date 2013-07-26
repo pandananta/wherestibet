@@ -25,6 +25,14 @@ body{
 	background-image:url('background.png');
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
+body a, body a:visited{
+	color: #A5BFDD;
+}
+body a:hover{
+	background-color: transparent;
+	color:#FF7C70;
+	text-decoration: none;
+}
 p, ol, ul, td, label{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-size: 14px;
@@ -63,14 +71,7 @@ h2{
 	color: #A5BFDD;
 	font-size: 25px;
 }
-body a, body a:visited{
-	color: #A5BFDD;
-}
-body a:hover{
-	background-color: transparent;
-	color:#FF7C70;
-	text-decoration: none;
-}
+
 
 @media (max-width: 1080px) {
 	html { 

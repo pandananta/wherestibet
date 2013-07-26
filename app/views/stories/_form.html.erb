@@ -17,23 +17,23 @@
             <h1>Share your Life Story</h1>
         <div class="field">
           <%= f.label "Full name"%>
-          <%= f.text_field :author, :class => "input-xxlarge" %>
+          <%= f.text_field :author, :class => "input-block-level" %>
         </div>
         <div class="field">
           <%= f.label "Gender" %>
-          <%= f.select :gender, options_for_select(["Woman", "Man"]), {}, :multiple => false, :class => "input-xxlarge" %>
+          <%= f.select :gender, options_for_select(["Woman", "Man"]), {}, :multiple => false, :class => "input-block-level" %>
         </div>
         <div class="field">
           <%= f.label "age" %>
-          <%= f.number_field :age, :class => "input-xxlarge" %>
+          <%= f.number_field :age, :class => "input-block-level" %>
         </div>
         <div class="field">
           <%= f.label "email address (will not be shared)." %>
-          <%= f.email_field :email, :class => "input-xxlarge" %>
+          <%= f.email_field :email, :class => "input-block-level" %>
         </div>
         <div class="field">
           <%= f.label "As a Tibetan refugee, how would you describe your life to someone living in a different country?"  %>
-          <%= f.text_area :narrative, :class => "input-xxlarge", :rows => "7" %>
+          <%= f.text_area :narrative, :class => "input-block-level", :rows => "7" %>
         </div>
         <div class= "geo">
           <% g=request.location %>
