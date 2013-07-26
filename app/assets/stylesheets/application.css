@@ -106,3 +106,7 @@ h2{
 		font-size:8px;
 	}
 }
+
+.typeahead.dropdown-menu i{
+	display: none !important;
+}

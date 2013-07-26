@@ -14,6 +14,7 @@
 //= require bootstrap.js
 //= require jquery.fancybox
 //= require purl
+//= require underscore
 //= require_tree .
 
 function initialize() {
@@ -86,6 +87,8 @@ function initialize() {
         history.replaceState("", "Where's Tibet?", "/"); return;}
     });
   }
+
+
   google.maps.event.addListener(map, 'tilesloaded', tilesLoaded);
   function tilesLoaded() {
     google.maps.event.clearListeners(map, 'tilesloaded');
@@ -133,7 +136,19 @@ function initialize() {
           }
         }
       return "";
-  }  
+  }
+
+  $('.search-query').typeahead({
+    source: function (query, process) {
+      return $.get('/stories.json', { q: query }, function (stories) {
+        return process(_.map(stories, function(story) {return story.author + " <i>" + story.id + "</i>"} ));
+      });
+    },
+    updater: function(item){
+      var regex = /<i>(.*?)<\/i>/ig;
+      window.location.href = "/stories?n=" + _.last(regex.exec(item));
+    }
+  });  
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 

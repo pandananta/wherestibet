@@ -2,7 +2,11 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
+    if params[:q]
+      @stories = Story.where("author ILIKE ?", "%#{params[:q]}%")
+    else
+      @stories = Story.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
