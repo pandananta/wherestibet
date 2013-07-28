@@ -15,6 +15,7 @@
 //= require jquery.fancybox
 //= require purl
 //= require underscore
+//= require infobox
 //= require_tree .
 
 function initialize() {
@@ -66,12 +67,29 @@ function initialize() {
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(markerLat,markerLong),
       map: map,
-      title:markerAuthor
     });
-    initMarker(marker, i);
+    
+    var infobox = new InfoBox({
+         content: markerAuthor,
+         disableAutoPan: false,
+         pixelOffset: new google.maps.Size(-30, 5),
+         zIndex: null,
+         boxStyle: {
+           background: "white"
+          ,padding: "3px 3px"
+          ,textAlign: "center"
+          ,fontSize: "8pt"
+          ,"min-width": "50px"
+         },
+        closeBoxMargin: "12px 4px 2px 2px",
+        infoBoxClearance: new google.maps.Size(1, 1),
+        closeBoxURL: ""
+
+    });
+    initMarker(marker, i, infobox);
   }
 
-  function initMarker(marker, number) {
+  function initMarker(marker, number, window) {
     google.maps.event.addListener(marker, 'click', function(e) {
       // window.location.href = ("/?n=" + window.stories[number]["id"]);
       //loads fancybox without page reload, but changes url to match story url
@@ -79,6 +97,12 @@ function initialize() {
       $.fancybox( {href: ('/stories/' + $.url(window.location.href).param('n')) , type:'iframe',  afterClose : function() {
         history.replaceState("", "Where's Tibet?", "/"); return;}
       });
+    });
+    google.maps.event.addListener(marker, 'mouseover', function() {
+      window.open(map,marker);
+    });
+    google.maps.event.addListener(marker, 'mouseout', function() {
+      window.close(map,marker);
     });
   }
 

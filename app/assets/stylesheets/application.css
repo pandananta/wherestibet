@@ -43,6 +43,26 @@ p, ol, ul, td, label{
   background-color: transparent;
 }
 
+.typeahead, .dropdown-menu{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.dropdown-menu > a, .dropdown-menu > a {
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+    outline: 0 none;
+    color: #777777;
+    text-decoration: none;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+.dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+    background-color: transparent;
+    background-image: none;
+    background-repeat: no-repeat;
+    outline: 0 none;
+    text-decoration: none;
+}
 .container{
 	height:100%;
 
@@ -71,7 +91,6 @@ h2{
 	color: #A5BFDD;
 	font-size: 25px;
 }
-
 
 @media (max-width: 1080px) {
 	html { 

@@ -35,12 +35,13 @@
           <%= f.label "As a Tibetan refugee, how would you describe your life to someone living in a different country?"  %>
           <%= f.text_area :narrative, :class => "input-block-level", :rows => "7" %>
         </div>
+        <br>
         <div class= "geo">
           <% g=request.location %>
           <%= f.hidden_field :city, :value => g.city %>
           <%= f.hidden_field :country, :value => g.country %>
           <%= f.hidden_field :ip, :value => request.ip %>
-          <%= f.label "After you click Create, your story will be plotted on the homepage at #{g.city}, #{g.country}." %>
+          <p> After you click Create, your story will be plotted on the homepage at <strong> <%= g.city %>, <%= g.country %>. </strong></p>
         </div>
         <div class="field">
           <p> By submitting, you acknowledge you have read the <%=link_to('terms of service', '/tos')%>.</p>
