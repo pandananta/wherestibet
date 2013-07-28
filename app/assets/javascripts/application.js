@@ -96,7 +96,7 @@ function initialize() {
 
   }
 
-  function initMarker(marker, number, window) {
+  function initMarker(marker, number, infobox) {
     google.maps.event.addListener(marker, 'click', function(e) {
       // window.location.href = ("/?n=" + window.stories[number]["id"]);
       //loads fancybox without page reload, but changes url to match story url
@@ -106,10 +106,10 @@ function initialize() {
       });
     });
     google.maps.event.addListener(marker, 'mouseover', function() {
-      window.open(map,marker);
+      infobox.open(map,marker);
     });
     google.maps.event.addListener(marker, 'mouseout', function() {
-      window.close(map,marker);
+      infobox.close(map,marker);
     });
     if(mc === null)
       mc = new MarkerClusterer(map);
