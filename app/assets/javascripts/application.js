@@ -16,6 +16,7 @@
 //= require purl
 //= require underscore
 //= require infobox
+//= require markerclusterer
 //= require_tree .
 
 function initialize() {
@@ -36,8 +37,8 @@ function initialize() {
   }
   var map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
-  
-
+  var mc = null //new MarkerClusterer(map);
+  var markerList = [];
   var homeButton = document.getElementById("wtb");
   homeButton.onclick=function(){
     //reset zoom
@@ -69,6 +70,8 @@ function initialize() {
       map: map,
     });
     
+
+    
     var infobox = new InfoBox({
          content: markerAuthor,
          disableAutoPan: false,
@@ -86,7 +89,11 @@ function initialize() {
         closeBoxURL: ""
 
     });
+    
     initMarker(marker, i, infobox);
+
+    
+
   }
 
   function initMarker(marker, number, window) {
@@ -104,6 +111,9 @@ function initialize() {
     google.maps.event.addListener(marker, 'mouseout', function() {
       window.close(map,marker);
     });
+    if(mc === null)
+      mc = new MarkerClusterer(map);
+    mc.addMarker(marker, true);
   }
 
   if ($.url(window.location.href).param('n')) {
@@ -172,7 +182,7 @@ function initialize() {
       var regex = /<i>(.*?)<\/i>/ig;
       window.location.href = "/stories?n=" + _.last(regex.exec(item));
     }
-  });  
+  }); 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
